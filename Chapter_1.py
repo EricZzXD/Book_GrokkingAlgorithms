@@ -23,7 +23,7 @@ def C1_BinarySearch(binary_array, binary_target):
         mid_index = (low_index + high_index)/2
         guess = binary_array[mid_index]
         if guess == binary_target:
-            print mid_index
+            print "Index: " + str(mid_index)
             return mid_index
         elif binary_target < guess:
             high_index = mid_index - 1

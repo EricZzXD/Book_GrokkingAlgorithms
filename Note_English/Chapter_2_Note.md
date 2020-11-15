@@ -58,5 +58,23 @@
            - Insertion will be faster than array, same as linked list (basically the insertion occur in linked list)
            
            
-           
-## 2.3 Selection Sort  -> P32
+## 2.3 Selection Sort -> P35
+   - **Work Principle** (https://www.programiz.com/dsa/selection-sort)
+       - Find the smallest (Biggest) value of the array, 
+       - and swap the smallest (Biggest) value with initial index 
+       - And then the initial index +1, the operation stop until the array finish sorting 
+       
+   - **Efficiency** 
+       - Best situation of Time Complexity: O(n^2)
+       - Worst situation of Time Complexity: O(n^2)
+       
+       
+## Recap 
+   - Your computer’s memory is like a giant set of drawers.
+   - When you want to store multiple elements, use an array or a list.
+   - With an array, all your elements are stored right next to each other.
+   - With a list, elements are strewn all over, and one element stores the address of the next one.
+   - Arrays allow fast reads.
+   - Linked lists allow fast inserts and deletes.
+   - All elements in the array should be the same type (all ints, all doubles, and so on).       
+

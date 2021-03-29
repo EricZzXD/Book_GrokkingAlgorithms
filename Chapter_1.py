@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 # Chapter 1 -> Algorithm Introduction
+import timeit
 
 
 def main():
@@ -7,8 +8,6 @@ def main():
     binary_array = [1, 2, 3, 4, 5, 6, 7, 8, 9]
     binary_target = 8
     C1_BinarySearch(binary_array, binary_target)
-
-    # 1.2 -> 选择排序 (Selection Sort)
 
 
 # 1.1 -> 二分法 (PDF: P14 或 书:P2)

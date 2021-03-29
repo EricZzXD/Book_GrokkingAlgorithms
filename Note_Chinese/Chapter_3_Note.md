@@ -1,6 +1,87 @@
 # 算法图解笔记 -> 第三章: 递归
 
 ## 3.1 递归 -> P29
+   - 递归的用法
+       - 函数调用自己.... 很难解释（上网找资料）
+   - 递归的特点
+       - 递归只是让解决方案更清晰，没有性能上的优势。 
+       - 如果使用循环，程序的性能可能更高；如果使用递归，程序可能更容易理解，如何选择要看什么对你说更重要。
+   
+   
+## 3.2 极限条件和递归条件 -> P32   
+   - 问题
+        - 由于递归函数调用自己，因此很容易出错，进而导致无线循环。
+   - 解决方法
+        - 编写函数时，必须写好停止条件
+            - 基线条件： 函数调用自己
+            - 递归条件：函数不在调用自己
+        ```
+            def countdown(i):
+                print i
+                if i<=0:             -----基线条件
+                    return
+                else：
+                    countdown(i-1)   -----递归条件
+        ```
+     
+     
+## 3.3 栈（zhan） -> P33
+   - 特点：
+       - 原则：先进后出
+       - 栈的操作只有两种，压入（push）和弹出（pop)，
+           - 压入 -- 在最上面添加数据或代办事项
+           - 弹出 -- 删除并读取最上面的代办事项
+          
+   - 例子：
+       - 堆箱子 -- 把箱子堆在一起，拿箱子的时候必须先把外面的箱子拿出来才可以把里面的现在拿出去。 
+      
 
-           
+
+## 3.3.1 调用栈（zhan） -> P34
+   - 调用栈例子：         
+    
+        ```
+             def greet(name):
+                  print "Hello, " + name + "!"
+                  greet2(name)
+                  print "Getting ready to say goodbye..."
+                  bye("greet1")
+                
+                def bye(number):
+                  print "Bye " + number
+                
+                def greet2(name):
+                  print "How are you " + name + "?"
+                  bye("greet2")
+                
+                greet("Eric")
+                
+        ```
+    
+        结果：
+        
+            Hello, Eric!                    ---- From greet
+            How are you Eric?               ---- From greet2
+            Bye greet2                      ---- From greet2's bye()
+            Getting ready to say goodbye... ---- From greet
+            Bye greet 1                     ---- From greet
+       
+    
+    
+   - 练习 -> P36
+        - 3.1 根据下面的调用栈，你获得那些信息？ （P36）
+            1. 调用了函数greet， 并将参数name的值指定为maggle；
+            2. 函数greet调用了函数greet2， 并将参数name的值指定为maggle；
+            3. 此时函数greet处于未完成状态；
+            4. 当前调用的函数为greet2；
+            5. 这函数执行完毕后，函数greet将接着执行
+      
+ 
+## 3.3.2 递归调用栈（zhan） -> P36
+
+
+
+
+
+      
 ## 总结
